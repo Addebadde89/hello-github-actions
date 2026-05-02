@@ -1,0 +1,15 @@
+name: "Hello Actions"
+description: "Greet someone"
+author: "GitHub"
+
+inputs:
+  MY_NAME:
+    description: "Who to greet"
+    required: true
+    default: "World"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.MY_NAME }}
